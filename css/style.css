@@ -1,0 +1,93 @@
+body {
+    background: linear-gradient(to bottom, #0a0011, #1a0022);
+    color: #cc99ff;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    text-shadow: 0 0 5px #cc99ff, 0 0 10px #9933ff, 0 0 20px #6600cc;
+}
+
+.glitch {
+    position: relative;
+    color: #cc99ff;
+    font-size: 2em;
+    animation: flicker 2s infinite alternate;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.glitch::before {
+    top: -2px;
+    color: #ff00ff;
+    animation: glitchTop 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    top: 2px;
+    color: #00ffff;
+    animation: glitchBottom 1.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitchTop {
+    0% { left: 0px; }
+    20% { left: 2px; }
+    40% { left: -2px; }
+    60% { left: 1px; }
+    80% { left: -1px; }
+    100% { left: 0px; }
+}
+
+@keyframes glitchBottom {
+    0% { left: 0px; }
+    20% { left: -2px; }
+    40% { left: 2px; }
+    60% { left: -1px; }
+    80% { left: 1px; }
+    100% { left: 0px; }
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+.project-card {
+    border: 1px solid #cc99ff;
+    padding: 15px;
+    margin: 10px 0;
+    background: rgba(34, 0, 51, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #cc99ff;
+    background: rgba(34, 0, 51, 0.8);
+    cursor: pointer;
+}
+
+a {
+    color: #cc99ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 5px #cc99ff, 0 0 10px #cc99ff;
+}
+
