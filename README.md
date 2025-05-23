@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/img/cyberme.png" alt="CyberMe Preview" width="600"/>
+</p>
+
 # CyberMe - corsican2dev
 
 Bienvenue dans mon interface immersive type cyberpunk.  
