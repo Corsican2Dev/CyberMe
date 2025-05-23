@@ -3,7 +3,7 @@ body {
     color: #cc99ff;
     font-family: 'Courier New', monospace;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     overflow-x: hidden;
 }
 
@@ -90,4 +90,40 @@ a {
 a:hover {
     text-shadow: 0 0 5px #cc99ff, 0 0 10px #cc99ff;
 }
+
+.projects {
+    max-height: 300px;
+    overflow-y: auto;
+    position: relative;
+    padding-right: 10px;
+    margin-bottom: 2rem;
+    border: 1px solid #cc99ff;
+    border-radius: 10px;
+    background-color: rgba(20, 0, 30, 0.5);
+}
+
+/* Scroll personnalisé (facultatif mais stylé) */
+.projects::-webkit-scrollbar {
+    width: 8px;
+}
+.projects::-webkit-scrollbar-thumb {
+    background: #cc99ff;
+    border-radius: 4px;
+}
+
+/* Message en bas */
+.scroll-hint {
+    text-align: center;
+    font-size: 0.9em;
+    color: #cc99ff;
+    animation: pulse 1.5s infinite;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
 

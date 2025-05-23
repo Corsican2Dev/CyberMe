@@ -28,3 +28,5 @@ VANTA.NET({
     color: 0xcc99ff,
     backgroundColor: 0x0a0011
 });
+
+
